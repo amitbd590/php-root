@@ -193,8 +193,8 @@ font-size: 20px;
 }
 .body-section{
 	background: rgb(224, 224, 224);
-	height: 400px;
-	border:2px solid #74caff;
+	height: 700px;
+	border:1px solid #74caff;
 }
 .body-section p{
 	margin: 10px 20px;

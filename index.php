@@ -42,56 +42,56 @@
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
 
         <table>
-
           <tr class="">
-            <td>
-              <p>Name</p>
-            </td>
-            <td><input type="text" name="name"></td>
-          </tr>
+            <td><p>Name</p></td>
+            <td><input type="text" name="name" required></td></tr>
           <tr class="">
-            <td>
-              <p>Age</p>
-            </td>
+            <td><p>Age</p></td>
             <td><input type="text" name="age"></td>
           </tr>
           <tr class="">
-            <td>
-              <p>E-mail</p>
-            </td>
+            <td><p>E-mail</p></td>
             <td><input type="text" name="email"></td>
           </tr>
           <tr class="">
+            <td><p>Gender</p></td>
             <td>
-              <p>Gender</p>
-            </td>
-            <td>
-              <input type="radio" name="gender"> Male
-              <input type="radio" name="gender"> FeMale
+              <input type="radio" name="gender" value="male"> <label for="male">Male</label>
+              <input type="radio" name="gender" value="female"> <label for="male">Female</label>
             </td>
           </tr>
           <tr class="">
-            <td>
-              <p>Comment</p>
-            </td>
-            <td>
-              <textarea name="comment" id="" cols="20" rows="5"></textarea>
-            </td>
+            <td><p>Comment</p></td>
+            <td><textarea name="comment" id="" cols="20" rows="5"></textarea></td>
           </tr>
           <tr class="">
             <td></td>
-            <td><input type="submit" name="submit"></td>
+            <td><input type="submit" name="submit" value="submit"></td>
           </tr>
-
-
         </table>
       </form>
+<?php
+      
+      if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $name = $_POST["name"];
+        $age = $_POST["age"];
+        $email = $_POST["email"];
+        $gender = $_POST["gender"];
+        $comment = $_POST["comment"];
+        $submit = $_POST["submit"];
+
+        echo "Name is : ".$name. "<br/>";
+        echo "Age is : ".$age. "<br/>";
+        echo "Email is : ".$email. "<br/>";
+        echo "Gender is : ".$gender. "<br/>";
+        echo "Comment is : ".$comment. "<br/>";        
+      }     
+      ?>
 
 
 
 
-
-
+      
     </section>
 
 
