@@ -1,0 +1,227 @@
+/*
+Theme name :
+Author: Amit
+Support: amitbd590@gmail.com
+Description :-----------
+Version:1.0
+*/
+
+/*CSS Index ------------
+
+1. Theme defaul css.
+2. Header.
+3. Slider.
+4. About-Area.
+5. Feature-Box.
+6. Department.
+7. Counter.
+8. Footer.
+
+*/
+
+
+
+/*1. Theme defaul css.*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
+.fix {
+	overflow: hidden;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	color: black;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0px;
+}
+
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+
+::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+
+.theme-overlay {
+	position: relative;
+}
+
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/****************/
+
+
+
+/*header*/
+
+/* Nav Bar  */
+
+.head{
+	text-align: center;
+	background: rgb(184, 184, 184);
+	padding: 20px 0px;
+	border:2px solid #444;
+}
+.logo h1{
+font-weight: 800;
+}
+.logo h2{
+font-weight: 400;
+font-size: 20px;
+}
+.body-section{
+	background: rgb(224, 224, 224);
+	height: 400px;
+	border:2px solid #74caff;
+}
+.body-section p{
+	margin: 10px 20px;
+}
+
+
+
+
+
+.footer{
+	text-align: center;
+	background: rgb(184, 184, 184);
+	padding: 20px 0px;
+	border:2px solid #444;
+}
+.footer h3{
+	font-weight: 800;
+
+}
+.footer p{
+	font-weight: 400;
+	font-size: 20px;
+	}
+
+
+
+
+
+/* 
+/* Media  */
