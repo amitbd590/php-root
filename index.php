@@ -1,6 +1,44 @@
 <?php
 
 $errName = $errAge = $errEmail = $errGender = $errComment = $errSubmit = "";
+
+$name = $age = $email = $gender =$comment =$submit = "";      
+      if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(empty($_POST["name"])){
+          $errName = "Name is Required!";
+        }else{
+        $name = $_POST["name"];
+             }
+
+        if(empty($_POST["age"])){
+          $errAge = "Age is Required!";
+        }else{
+        $age = $_POST["age"];
+              }
+
+        if(empty($_POST["email"])){
+          $errEmail = "Email is Required!";
+          }elseif(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+            $errEmail = "Invalidate Email id!";
+          }else{
+          $email = $_POST["email"];
+              }
+
+        if(empty($_POST["gender"])){
+          $errGender = "Gender is Required!";
+        }else{
+        $gender = $_POST["gender"];
+              }
+        
+        $comment = $_POST["comment"];
+        $submit = $_POST["submit"];
+
+        // echo "Name is : ".$name. "<br/>";
+        // echo "Age is : ".$age. "<br/>";
+        // echo "Email is : ".$email. "<br/>";
+        // echo "Gender is : ".$gender. "<br/>";
+        // echo "Comment is : ".$comment. "<br/>";        
+      }     
  
 
 ?>
@@ -53,7 +91,7 @@ $errName = $errAge = $errEmail = $errGender = $errComment = $errSubmit = "";
         <p class="req">* Required</p>
           <tr class="">
             <td><p>Name</p></td>
-            <td><input type="text" name="name" required> <span class="req1"> * <?php echo $errName ?> </span> </td>
+            <td><input type="text" name="name"> <span class="req1"> * <?php echo $errName ?> </span> </td>
           </tr>
           <tr class="">
             <td><p>Age</p></td>
@@ -81,36 +119,7 @@ $errName = $errAge = $errEmail = $errGender = $errComment = $errSubmit = "";
           </tr>
         </table>
       </form>
-
-
-      
-
-
-
-
-<?php
-
-$name = $age = $email = $gender =$comment =$submit = "";      
-      if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $name = $_POST["name"];
-        $age = $_POST["age"];
-        $email = $_POST["email"];
-        $gender = $_POST["gender"];
-        $comment = $_POST["comment"];
-        $submit = $_POST["submit"];
-
-        echo "Name is : ".$name. "<br/>";
-        echo "Age is : ".$age. "<br/>";
-        echo "Email is : ".$email. "<br/>";
-        echo "Gender is : ".$gender. "<br/>";
-        echo "Comment is : ".$comment. "<br/>";        
-      }     
-      ?>
-
-
-
-
-      
+ 
     </section>
 
 
