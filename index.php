@@ -1,3 +1,11 @@
+<?php
+
+$errName = $errAge = $errEmail = $errGender = $errComment = $errSubmit = "";
+ 
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -42,23 +50,26 @@
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
 
         <table>
+        <p class="req">* Required</p>
           <tr class="">
             <td><p>Name</p></td>
-            <td><input type="text" name="name" required></td></tr>
+            <td><input type="text" name="name" required> <span class="req1"> * <?php echo $errName ?> </span> </td>
+          </tr>
           <tr class="">
             <td><p>Age</p></td>
-            <td><input type="text" name="age"></td>
+            <td><input type="text" name="age"> <span class="req1"> * <?php echo $errAge ?> </span> </td>
           </tr>
           <tr class="">
             <td><p>E-mail</p></td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email"> <span class="req1" >* <?php echo $errEmail ?></span></td>
           </tr>
           <tr class="">
             <td><p>Gender</p></td>
             <td>
               <input type="radio" name="gender" value="male"> <label for="male">Male</label>
               <input type="radio" name="gender" value="female"> <label for="male">Female</label>
-            </td>
+              <span class="req1"> *<?php echo $errGender ?></span>
+            </td> 
           </tr>
           <tr class="">
             <td><p>Comment</p></td>
@@ -70,8 +81,16 @@
           </tr>
         </table>
       </form>
-<?php
+
+
       
+
+
+
+
+<?php
+
+$name = $age = $email = $gender =$comment =$submit = "";      
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $_POST["name"];
         $age = $_POST["age"];
